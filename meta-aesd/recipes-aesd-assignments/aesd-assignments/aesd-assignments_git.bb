@@ -31,6 +31,10 @@ inherit cmake
 
 TARGET_LDFLAGS += "-pthread -lrt"
 
+inherit update-rc.d
+INITSCRIPT_NAME = "aesdsocket-start-stop.sh"
+INITSCRIPT_PARAMS = "defaults"
+
 do_configure () {
 	:
 }
@@ -51,6 +55,6 @@ do_install () {
 	install -m 0755 ${S}/server/aesdsocket ${D}${bindir}/
 
 	# Install the init script
-    install -d ${D}${sysconfdir}/init.d
-    install -m 0755 ${S}/server/aesdsocket-start-stop ${D}${sysconfdir}/init.d/aesdsocket-start-stop.sh
+        install -d ${D}${sysconfdir}/init.d
+        install -m 0755 ${S}/server/aesdsocket-start-stop ${D}${sysconfdir}/init.d/aesdsocket-start-stop.sh
 }
