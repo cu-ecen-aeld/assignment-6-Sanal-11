@@ -17,7 +17,7 @@ SRC_URI = "gitsm://github.com/cu-ecen-aeld/assignments-3-and-later-Sanal-11.git;
 
 # Modify these as desired
 PV = "1.0+git${SRCPV}"
-SRCREV = "90cebc73a3d346f817f16f77359513b2ddc75a2b"
+SRCREV = "69e458f3df69e686831b80b1644876557ce85579"
 
 DEPENDS += "ruby-native"
 
